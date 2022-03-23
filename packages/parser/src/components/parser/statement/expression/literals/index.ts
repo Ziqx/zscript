@@ -1,6 +1,6 @@
-import { TokenTypes } from "../../../../../constants/bhaiLangSpec";
+import { TokenTypes } from "../../../../../constants/zscriptSpec";
 import UnsupportedTypeException from "../../../../../exceptions/unsupportedTypeException";
-import BhaiLangModule from "../../../../../module/bhaiLangModule";
+import zscriptModule from "../../../../../module/zscriptModule";
 import TokenExecutor from "../../../tokenExecutor";
 import { ASTNode } from "../../../types/nodeTypes";
 
@@ -16,16 +16,16 @@ export default abstract class Literal {
   static getLiteralImpl(tokenType?: string): Literal {
     switch (tokenType) {
       case TokenTypes.NUMBER_TYPE:
-        return BhaiLangModule.getNumericLiteral();
+        return zscriptModule.getNumericLiteral();
 
       case TokenTypes.BOOLEAN_TYPE:
-        return BhaiLangModule.getBooleanLiteral();
+        return zscriptModule.getBooleanLiteral();
 
       case TokenTypes.STRING_TYPE:
-        return BhaiLangModule.getStringLiteral();
+        return zscriptModule.getStringLiteral();
 
       case TokenTypes.NALLA_TYPE:
-        return BhaiLangModule.getNullLiteral();
+        return zscriptModule.getNullLiteral();
 
       default:
         throw new UnsupportedTypeException(

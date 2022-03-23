@@ -1,4 +1,4 @@
-import { NodeType } from "bhai-lang-parser";
+import { NodeType } from "zscript-parser";
 
 import { RuntimeException } from "../../src";
 import Scope from "../../src/components/scope";

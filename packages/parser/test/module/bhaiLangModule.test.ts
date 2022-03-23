@@ -2,11 +2,11 @@ import { Parser } from "../../src/components/parser";
 import Program from "../../src/components/parser/program";
 import TokenExecutor from "../../src/components/parser/tokenExecutor";
 import Tokenizer from "../../src/components/tokenizer";
-import BhaiLangModule from "../../src/module/bhaiLangModule";
+import zscriptModule from "../../src/module/zscriptModule";
 
-test("test bhaiLangModule should success", () => {
-  expect(BhaiLangModule.getTokenizer()).toBeInstanceOf(Tokenizer);
-  expect(BhaiLangModule.getTokenExecutor()).toBeInstanceOf(TokenExecutor);
-  expect(BhaiLangModule.getProgram()).toBeInstanceOf(Program);
-  expect(BhaiLangModule.getParser()).toBeInstanceOf(Parser);
+test("test zscriptModule should success", () => {
+  expect(zscriptModule.getTokenizer()).toBeInstanceOf(Tokenizer);
+  expect(zscriptModule.getTokenExecutor()).toBeInstanceOf(TokenExecutor);
+  expect(zscriptModule.getProgram()).toBeInstanceOf(Program);
+  expect(zscriptModule.getParser()).toBeInstanceOf(Parser);
 });

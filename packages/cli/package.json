@@ -1,11 +1,11 @@
 {
-  "name": "bhailang",
+  "name": "zscript",
   "version": "0.1.0",
-  "description": "CLI for bhai-lang",
+  "description": "CLI for zscript",
   "source": "src/index.ts",
   "main": "bin/index.js",
   "bin": {
-    "bhailang": "./bin/index.js"
+    "zscript": "./bin/index.js"
   },
   "files": [
     "bin"
@@ -16,31 +16,27 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DulLabs/bhai-lang.git"
+    "url": "git+https://github.com/Ziqx/zscript.git"
   },
   "keywords": [
     "programming",
     "language",
-    "bhai-lang",
+    "zscript",
     "bl",
     "javascript",
     "typescript"
   ],
   "contributors": [
     {
-      "name": "Aniket Singh",
-      "url": "https://github.com/aniketsingh0104"
-    },
-    {
-      "name": "Rishabh Tripathi",
-      "url": "https://github.com/ristri"
+      "name": "Fathah",
+      "url": "https://github.com/fathah"
     }
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/DulLabs/bhai-lang/issues"
+    "url": "https://github.com/Ziqx/zscript/issues"
   },
-  "homepage": "https://github.com/DulLabs/bhai-lang#readme",
+  "homepage": "https://github.com/Ziqx/zscript#readme",
   "devDependencies": {
     "ts-node": "^10.4.0",
     "ts-jest": "^27.1.2",
@@ -51,6 +47,6 @@
     "@types/jest": "^27.4.0",
     "config": "*",
     "tsconfig": "*",
-    "bhai-lang-interpreter": "*"
+    "zscript-interpreter": "*"
   }
 }

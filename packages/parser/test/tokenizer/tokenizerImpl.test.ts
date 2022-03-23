@@ -1,24 +1,24 @@
 import TokenizerImpl from "../../src/components/tokenizer";
-import { SPEC, TokenTypes } from "../../src/constants/bhaiLangSpec";
+import { SPEC, TokenTypes } from "../../src/constants/zscriptSpec";
 import InvalidStateException from "../../src/exceptions/invalidStateException";
 
 const tokenizer = new TokenizerImpl(SPEC);
 
 test("test Tokenizer.getNextToken with HI_BHAI_TYPE should success", () => {
-  tokenizer.initTokenizer(`hi bhai`);
+  tokenizer.initTokenizer(`zinga`);
 
   expect(tokenizer.getNextToken()).toStrictEqual({
     type: TokenTypes.HI_BHAI_TYPE,
-    value: "hi bhai",
+    value: "zinga",
   });
 });
 
 test("test Tokenizer.getNextToken with BYE_BHAI_TYPE should success", () => {
-  tokenizer.initTokenizer(`bye bhai`);
+  tokenizer.initTokenizer(`bazinga`);
 
   expect(tokenizer.getNextToken()).toStrictEqual({
     type: TokenTypes.BYE_BHAI_TYPE,
-    value: "bye bhai",
+    value: "bazinga",
   });
 });
 

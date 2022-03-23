@@ -1,5 +1,5 @@
 import { NodeType } from "../../../../constants/constants";
-import BhaiLangModule from "../../../../module/bhaiLangModule";
+import zscriptModule from "../../../../module/zscriptModule";
 import TokenExecutor from "../../tokenExecutor";
 import { ASTNode } from "../../types/nodeTypes";
 
@@ -16,34 +16,34 @@ export default abstract class Expression {
   static getExpressionImpl(expressionType: keyof typeof NodeType): Expression {
     switch (expressionType) {
       case NodeType.AdditiveExpression:
-        return BhaiLangModule.getAdditiveExpression();
+        return zscriptModule.getAdditiveExpression();
 
       case NodeType.MultiplicativeExpression:
-        return BhaiLangModule.getMultiplicativeExpression();
+        return zscriptModule.getMultiplicativeExpression();
 
       case NodeType.PrimaryExpression:
-        return BhaiLangModule.getPrimaryExpression();
+        return zscriptModule.getPrimaryExpression();
 
       case NodeType.ParanthesizedExpression:
-        return BhaiLangModule.getParanthesizedExpression();
+        return zscriptModule.getParanthesizedExpression();
 
       case NodeType.AssignmentExpression:
-        return BhaiLangModule.getAssignmentExpression();
+        return zscriptModule.getAssignmentExpression();
 
       case NodeType.EqualityExpression:
-        return BhaiLangModule.getEqualityExpression();
+        return zscriptModule.getEqualityExpression();
 
       case NodeType.LogicalANDExpression:
-        return BhaiLangModule.getLogicalANDExpression();
+        return zscriptModule.getLogicalANDExpression();
 
       case NodeType.LogicalORExpression:
-        return BhaiLangModule.getLogicalORExpression();
+        return zscriptModule.getLogicalORExpression();
 
       case NodeType.RelationalExpression:
-        return BhaiLangModule.getRelationalExpression();
+        return zscriptModule.getRelationalExpression();
 
       default:
-        return BhaiLangModule.getIndentifierExpression();
+        return zscriptModule.getIndentifierExpression();
     }
   }
 

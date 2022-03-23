@@ -41,14 +41,14 @@ NegativeTestCases.forEach((testCase) => {
 
 test("test redeclaring & printing variables in different scopes", () => {
   expect(() =>
-    interpreter.interpret(`hi bhai;
+    interpreter.interpret(`zinga;
     bhai ye hai a = 4;
     {
       bhai ye hai a = 90;
       bol bhai a;
     }
     bol bhai a;
-    bye bhai;`)
+    bazinga;`)
   ).not.toThrowError();
   expect(console.log).toHaveBeenCalledWith("90");
   expect(console.log).toHaveBeenCalledWith("4");
@@ -56,14 +56,14 @@ test("test redeclaring & printing variables in different scopes", () => {
 
 test("test assigning variable in parent scope", () => {
   expect(() =>
-    interpreter.interpret(`hi bhai;
+    interpreter.interpret(`zinga;
     bhai ye hai a = 4;
     {
       a = 90;
       bol bhai a;
     }
     bol bhai a;
-    bye bhai;`)
+    bazinga;`)
   ).not.toThrowError();
   expect(console.log).toHaveBeenCalledWith("90");
   expect(console.log).toHaveBeenCalledWith("90");
@@ -71,13 +71,13 @@ test("test assigning variable in parent scope", () => {
 
 test("test accessing variable in parent scope", () => {
   expect(() =>
-    interpreter.interpret(`hi bhai;
+    interpreter.interpret(`zinga;
     bhai ye hai a = 4;
     {
       bol bhai a;
     }
     bol bhai a;
-    bye bhai;`)
+    bazinga;`)
   ).not.toThrowError();
   expect(console.log).toHaveBeenCalledWith("4");
   expect(console.log).toHaveBeenCalledWith("4");
@@ -86,13 +86,13 @@ test("test accessing variable in parent scope", () => {
 test("whileStatement test with 2 times loop, should success", () => {
   expect(() =>
     interpreter.interpret(`
-    hi bhai;
+    zinga;
     bhai ye hai a = 0;
     jab tak bhai (a < 2) {
       bol bhai "bhai";
       a += 1;
     }
-    bye bhai;`)
+    bazinga;`)
   ).not.toThrowError();
   expect(console.log).toHaveBeenCalledWith("bhai");
   expect(console.log).toHaveBeenCalledWith("bhai");
@@ -101,7 +101,7 @@ test("whileStatement test with 2 times loop, should success", () => {
 test("whileStatement test with nested loops - 2, should success", () => {
   expect(() =>
     interpreter.interpret(`
-    hi bhai;
+    zinga;
     bhai ye hai a = 0, b = 0;
     jab tak bhai (a < 2) {
       jab tak bhai (b < 1) {
@@ -110,7 +110,7 @@ test("whileStatement test with nested loops - 2, should success", () => {
       }
       a += 1;
     }
-    bye bhai;
+    bazinga;
     `)
   ).not.toThrowError();
   expect(console.log).toHaveBeenCalledWith("bhai");
@@ -119,7 +119,7 @@ test("whileStatement test with nested loops - 2, should success", () => {
 test("whileStatement test with nested loops - 3, should success", () => {
   expect(() =>
     interpreter.interpret(`
-    hi bhai;
+    zinga;
     bhai ye hai a = 0;
     jab tak bhai (a < 2) {
       bhai ye hai b = 0;
@@ -131,7 +131,7 @@ test("whileStatement test with nested loops - 3, should success", () => {
       }
       a += 1;
     }
-    bye bhai;
+    bazinga;
     `)
   ).not.toThrowError();
   expect(console.log).toHaveBeenCalledWith("bhai");
@@ -142,7 +142,7 @@ test("whileStatement test with nested loops - 3, should success", () => {
 test("whileStatement test with nested loops - 4, should success", () => {
   expect(() =>
     interpreter.interpret(`
-    hi bhai
+    zinga
     bhai ye hai a = 0;
     jab tak bhai (a < 10) {
       bol bhai a;
@@ -152,7 +152,7 @@ test("whileStatement test with nested loops - 4, should success", () => {
       }
     }
     bol bhai "done";
-    bye bhai
+    bazinga
     `)
   ).not.toThrowError();
   expect(console.log).toHaveBeenCalledWith("0");
@@ -166,7 +166,7 @@ test("whileStatement test with nested loops - 4, should success", () => {
 test("whileStatement test with nested loops - 5, should success", () => {
   expect(() =>
     interpreter.interpret(`
-    hi bhai
+    zinga
     bhai ye hai a = 0;
     jab tak bhai (a < 10) {
       bol bhai a;
@@ -175,7 +175,7 @@ test("whileStatement test with nested loops - 5, should success", () => {
         bas kar bhai;
     }
     bol bhai "done";
-    bye bhai
+    bazinga
     `)
   ).not.toThrowError();
   expect(console.log).toHaveBeenCalledWith("0");
@@ -189,7 +189,7 @@ test("whileStatement test with nested loops - 5, should success", () => {
 test("whileStatement test with nested loops - 6, should success", () => {
   expect(() =>
     interpreter.interpret(`
-    hi bhai
+    zinga
     bhai ye hai a = 0;
     jab tak bhai (a < 10) {
       bol bhai a;
@@ -200,7 +200,7 @@ test("whileStatement test with nested loops - 6, should success", () => {
       bol bhai "2 baar hi chapunga";
     }
     bol bhai "done";
-    bye bhai
+    bazinga
     `)
   ).not.toThrowError();
   expect(console.log).toHaveBeenCalledWith("0");
@@ -213,12 +213,12 @@ test("whileStatement test with nested loops - 6, should success", () => {
 test("whileStatement test with infinite loop, should throw runtime exception after 5000 executions", () => {
   expect(() =>
     interpreter.interpret(`
-    hi bhai
+    zinga
     
     jab tak bhai (sahi) {
       bol bhai "bhai";
     }
-    bye bhai;
+    bazinga;
     
     `)
   ).toThrowError(RuntimeException);
@@ -230,7 +230,7 @@ test("whileStatement test with infinite loop, should throw runtime exception aft
 test("if-else ladders one after the other, should be evaluated separately", () => {
   expect(() =>
     interpreter.interpret(`
-    hi bhai
+    zinga
     bhai ye hai x = 6;
     agar bhai (x < 5) {
       bol bhai "x < 5";
@@ -241,7 +241,7 @@ test("if-else ladders one after the other, should be evaluated separately", () =
     } warna bhai {
       bol bhai "x > 4";
     }
-    bye bhai;
+    bazinga;
     
     `)
   ).not.toThrowError();
@@ -252,7 +252,7 @@ test("if-else ladders one after the other, should be evaluated separately", () =
 
 // test("jest", () => {
 //     interpreter.interpret(`
-//     hi bhai
+//     zinga
 //     bhai ye hai a = 0;
 //     jab tak bhai (a < 10) {
 //       bol bhai a;
@@ -263,6 +263,6 @@ test("if-else ladders one after the other, should be evaluated separately", () =
 //       bol bhai "2 baar hi chapunga";
 //     }
 //     bol bhai "done";
-//     bye bhai
+//     bazinga
 //     `);
 // });

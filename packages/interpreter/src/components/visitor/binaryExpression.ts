@@ -1,8 +1,8 @@
 import Visitor from ".";
-import { ASTNode, NodeType } from "bhai-lang-parser";
+import { ASTNode, NodeType } from "zscript-parser";
 
 import InvalidStateException from "../../exceptions/invalidStateException";
-import NallaPointerException from "../../exceptions/nallaPointerException";
+import NullPointerException from "../../exceptions/nallaPointerException";
 import RuntimeException from "../../exceptions/runtimeException";
 import { getOperationValue } from "../../helpers";
 import InterpreterModule from "../../module/interpreterModule";
@@ -48,7 +48,7 @@ export default class BinaryExpression implements Visitor {
       );
     }
 
-    const nallaException = new NallaPointerException(
+    const nallaException = new NullPointerException(
       `Nalla operand ni jamta "${node.operator}" ke sath`
     );
 

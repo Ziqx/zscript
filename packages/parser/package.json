@@ -1,7 +1,7 @@
 {
-  "name": "bhai-lang-parser",
+  "name": "zscript-parser",
   "version": "0.0.2",
-  "description": "Parser for bhai-lang",
+  "description": "Parser for zscript",
   "source": "src/index.ts",
   "types": "dist/index.d.ts",
   "main": "dist/index.js",
@@ -15,21 +15,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DulLabs/bhai-lang.git"
+    "url": "git+https://github.com/Ziqx/zscript.git"
   },
   "keywords": [
     "programming",
     "language",
-    "bhai-lang",
+    "zscript",
     "bl",
     "javascript",
     "typescript"
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/DulLabs/bhai-lang/issues"
+    "url": "https://github.com/Ziqx/zscript/issues"
   },
-  "homepage": "https://github.com/DulLabs/bhai-lang#readme",
+  "homepage": "https://github.com/Ziqx/zscript#readme",
   "devDependencies": {
     "string-width": "^5.1.0",
     "ts-node": "^10.4.0",
